@@ -42,6 +42,11 @@
  * -----------------------------------------------------------------------------
  */
 
+$link-teal: #298599;
+$hover-teal: #16CBB8;
+
+$sans-serif:'Helvetica Neue', Helvetica, Helvetica, Arial, sans-serif;
+
 /**
  * 5.0 $EFFECTS
  * -----------------------------------------------------------------------------
@@ -53,22 +58,319 @@
  * -----------------------------------------------------------------------------
  */
 
+.globals {
+  height: 100%;
+}
+
+a {
+  color: $link-teal;
+  &:hover {
+    color: $hover-teal;
+  }
+}
+
+h1.h1, h2.h2, h3.h3, h4.h4, label {
+  font-family: $sans-serif;
+  font-weight: bold;
+}
+
+.grid {
+  margin: 0 auto;
+  max-width: 96rem;
+  padding: 0 2.4rem;
+}
+
+
 
 /**
  * 7.0 $HEADER
  * -----------------------------------------------------------------------------
  */
 
+.nav-container {
 
+  width: 100%;
 
+  color: #FFF;
+  font-size: 1.6rem;
+  a {
+    color: #000;
+  }
+}
 
+.nav-title-wrapper {
+  float: left;
+  .nav-title {
+    padding: 2rem;
+  }
+}
+
+.nav-menu {
+  float: right;
+  margin-bottom: 2rem;
+  font-variant: small-caps;
+  .menu-item {
+    float: left;
+    a {
+      display: block;
+      padding: 1rem 2rem;
+      @include transition(all 150ms ease 0s);
+      &:hover {
+        background: #F9F9F9;
+        color: $hover-teal;
+      }
+    }
+  }
+}
+
+.current_page_item {
+  font-weight: bold;
+  a {
+    color: $link-teal;
+  }
+}
+
+.search-box-wrapper {
+  display: none;
+}
 
 /**
  * 8.0 $CONTENT
  * -----------------------------------------------------------------------------
  */
 
+.content-container {
+  position: relative;
+  color: #333;
+  font-size: 1.6rem;
+  font-family: Georgia, serif;
+}
 
+.contact-page {
+  height: 100%;
+}
+
+.frontpage-intro {
+  line-height: 1;
+  font-family: $sans-serif;
+  span {
+    display: block;
+  }
+  .frontpage-greetings {
+    font-size: 4rem;
+    .ozy {
+      display: inline-block;
+      padding: 0.25rem 1rem;
+      background-color: #000;
+      color: #FFF;
+    }
+  }
+  .frontpage-tagline {
+    padding: 0.25rem 1rem;
+    font-size: 9.6rem;
+    font-weight: bold;
+  }
+}
+
+.page-header {
+  margin-bottom: 2.4rem;
+  padding: 2.4rem;
+  background: #000;
+}
+
+
+.page-title {
+  color: #FFF;
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+
+
+.about-main-col {
+  float: left;
+  width: 70%;
+  padding-right: 2.4rem;
+
+.about-image {
+  margin-bottom: 2.4rem;
+}
+
+.about-article {
+
+  margin-bottom: 2.4rem;
+  p {
+    margin-bottom: 1.2rem;
+  }
+
+  .about-tagline {
+    font-size: 3.6rem;
+    font-weight: lighter;
+    line-height: 1;
+  }
+
+  .about-title {
+    font-size: 2.4rem;
+  }
+
+}
+
+}
+
+.about-aside-col {
+  float: left;
+  width: 30%;
+
+  .my-resume h4.h4 {
+
+    a {
+      display: block;
+      border: 0.2rem solid $link-teal;
+      border-radius: 0.3rem;
+      padding: 0.5rem 0;
+      font-size: 2.4rem;
+      font-weight: normal;
+      text-align: center;
+      @include transition(all 150ms ease 0s);
+      &:hover {
+        border: 0.2rem solid $hover-teal;
+        background: $hover-teal;
+        color: #FFF;
+      }
+    }
+
+  }
+
+  .my-profile {
+    dt {
+      float: left;
+      padding-right: 1rem;
+    }
+  }
+
+
+  div {
+    margin-bottom: 2.4rem;
+    border-bottom: 0.3rem solid #000;
+    padding-bottom: 2.4rem;
+    font-size: 1.4rem;
+    .aside-title {
+      font-size: 1.6rem;
+    }
+    ul li {
+      a {
+        display: block;
+        border-bottom: 0.1rem dotted #888;
+        padding: 0.7rem 0.25rem;
+        &:hover {
+          background: #F9F9F9;
+        }
+      }
+    }
+
+  }
+}
+
+.contact-form-container {
+  position: absolute;
+  top: 10.4rem;
+  width: 60rem;
+  padding: 2.4rem;
+  background: rgba(0, 0, 0, 0.8);
+  color: #FFF;
+  .contact-message {
+    margin-bottom: 2.4rem;
+    font-style: italic;
+  }
+  .contact-form {
+    font-size: 1.6rem;
+
+    fieldset {
+      margin-bottom: 1.2rem;
+    }
+
+    .contact-field {
+      display: block;
+      width: 100%;
+      margin: 0 0 1.2rem 0;
+      border: 1px solid #DDDDDD;
+      padding: 1rem;
+      font-size: 1.6rem;
+      @include transition(all 300ms ease-in-out);
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 8px rgba(81, 203, 238, 1);
+        border: 1px solid rgba(81, 203, 238, 1);
+      }
+    }
+    input[type="submit"] {
+      float: right;
+      margin: 0;
+      border: 0;
+      background: #000;
+      color: #FFF;
+      font-size: 2.4rem;
+      &:hover {
+        cursor: pointer;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .btn {
+      position: relative;
+      border: 3px solid #000;
+      border-radius: 2px;
+      box-shadow: 0 4px $link-teal;
+      padding: 1rem 5rem;
+      background: #FFF;
+      text-align: center;
+
+      &:after {
+
+        content: '';
+        position: absolute;
+        z-index: -1;
+
+
+      }
+
+      &:hover {
+        box-shadow: 0 4px $hover-teal;
+      }
+
+      &:active {
+        box-shadow: 0 0 $hover-teal;
+        top: 4px;
+      }
+
+    }
+
+  }
+}
+
+.map {
+  margin-bottom: -2.4rem;
+}
+
+.success, .error {
+  display: none;
+}
+
+.required {
+  color: red;
+}
+
+
+.list-posts-title {
+  font-size: 4.8rem;
+  line-height: 1;
+  a {
+    color: $link-teal;
+  }
+}
 
 
 /**
@@ -76,7 +378,57 @@
  * -----------------------------------------------------------------------------
  */
 
+.footer-container {
+  margin-top: 2.4rem;
+  padding: 4rem 2rem;
+  background: #000;
+  color: #FFF;
+  font-family: $sans-serif;
+  a {
+    color: #FFF;
+  }
 
+  .footer-about {
+
+    img {
+      float: left;
+      width: 30%;
+      padding-right: 2.4rem;
+      border-radius: 50%;
+    }
+    .footer-desc {
+      width: 70%;
+      float: left;
+      h3 {
+        font-size: 2.4rem;
+        line-height: 1;
+      }
+    }
+
+  }
+
+
+  .footer-nav {
+    li {
+      float: left;
+      margin-right: 1rem;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+
+  .copyright {
+    color: #888;
+    font-size: 1.2rem;
+    a {
+      color: #E9E9E9;
+      &:hover {
+        color: #FFF;
+      }
+    }
+  }
+
+}
 
 /**
  * 10.0 $META
