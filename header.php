@@ -13,7 +13,9 @@
   <!-- Font Awesome -->
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
-
+  <!-- Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,700,500,500italic,700italic,900,900italic,100,100italic,300,300italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <!-- Favicon -->
   <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicons/favicon.ico" />
 
@@ -40,7 +42,7 @@
 <body <?php if ( is_front_page() ) { echo ' class="frontpage" '; } ?> >
 
 <!-- Page Container -->
-<div class="globals">
+<div class="globals page">
 
 
 <!-- Navigation -->

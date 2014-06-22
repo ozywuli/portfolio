@@ -25,7 +25,7 @@
         <label for="contact-verification">Anti-Spam Security Check <span class="required">*</span><br /><span>9 x 9 = ?</span></label>
           <input type="number" name="verification" id="contact-verification" class="contact-field" placeholder="0" required aria-required="true">
       </fieldset>
-      <input type="submit" name="submit" value="Send Message" class="btn">
+      <input type="submit" name="submit" value="Send Message">
       <p class="success">Thank you. Your message has been sent.</p>
       <p class="error">Error: please check that you have correctly filled in all the required fields.</p>
     </form>

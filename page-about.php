@@ -30,7 +30,7 @@
   <aside class="about-aside-col">
 
     <div class="my-resume">
-      <h4 class="h4"><a href="<?php echo get_template_directory_uri(); ?>/resume.php" class="btn">View Resume</a></h4>
+      <h4 class="h4"><a href="<?php echo get_template_directory_uri(); ?>/resume.php">View Resume</a></h4>
     </div>
 
     <div class="my-profile">

@@ -1,15 +1,10 @@
 <?php
 
-// Enqueue CSS
 
-function theme_name_scripts() {
-  wp_enqueue_style( 'style-name', get_template_directory_uri().'/css/screen.css' );
-  wp_enqueue_script( 'script-name', get_template_directory_uri() . '/js/script.js', array(), '1.0.0', true );
-}
 
-add_action( 'wp_enqueue_scripts', 'theme_name_scripts' );
 
-// Enqueue Javascript
+
+// Enqueue Jquery
 
 if (!is_admin()) add_action("wp_enqueue_scripts", "my_jquery_enqueue", 11);
 function my_jquery_enqueue() {
@@ -17,6 +12,20 @@ function my_jquery_enqueue() {
    wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js", false, null);
    wp_enqueue_script('jquery');
 }
+
+
+
+// Enqueue CSS and JS
+
+function theme_name_scripts() {
+  wp_enqueue_style( 'style-name', get_template_directory_uri().'/css/screen.css' );
+  wp_enqueue_script( 'script-name', get_template_directory_uri() . '/js/isotope.min.js', array(), '1.0.0', true );
+  wp_enqueue_script( 'script-name', get_template_directory_uri() . '/js/script.js', array(), '1.0.0', true );
+}
+
+add_action( 'wp_enqueue_scripts', 'theme_name_scripts' );
+
+
 
 
 // Register Nav Menu
@@ -27,8 +36,6 @@ register_nav_menus(
     'footer-nav' => 'Footer Menu'
   )
 );
-
-
 
 
 // Filter Website Title
