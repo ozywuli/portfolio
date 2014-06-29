@@ -29,3 +29,24 @@ $(".contact-form").submit(function(e) {
   return false;
 
 });
+
+// Isotope
+
+var $container = $('#portfolio-grid').imagesLoaded( function() {
+  $container.isotope({
+  });
+
+});
+
+
+
+$('#filter a').click(function() {
+  var selector = $(this).attr('data-filter');
+  $container.isotope({filter: selector});
+  return false;
+});
+
+$('ul#filter a').click(function() {
+    $('ul#filter .current').removeClass('current');
+    $(this).parent().addClass('current');
+});

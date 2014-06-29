@@ -12,6 +12,7 @@
       </div>
 
       <div class="post-meta clearfix">
+
         <time datetime="<?php the_time('d/m/Y') ?>" pubdate="pubdate"><?php the_time('d M Y') ?></time>
         <div class="post-comments"> <a href="<?php the_permalink(); ?>"><?php comments_number( 'Leave a comment', '1 comment', '% comments'); ?></a></div>
       </div>

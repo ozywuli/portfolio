@@ -1,4 +1,7 @@
-<?php get_header(); ?>
+<?php
+/* Template Name: About */
+get_header();
+?>
 
 <!-- Page Title -->
 <header class="page-header">

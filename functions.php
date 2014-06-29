@@ -18,9 +18,9 @@ function my_jquery_enqueue() {
 // Enqueue CSS and JS
 
 function theme_name_scripts() {
-  wp_enqueue_style( 'style-name', get_template_directory_uri().'/css/screen.css' );
-  wp_enqueue_script( 'script-name', get_template_directory_uri() . '/js/isotope.min.js', array(), '1.0.0', true );
-  wp_enqueue_script( 'script-name', get_template_directory_uri() . '/js/script.js', array(), '1.0.0', true );
+  wp_enqueue_style( 'style-name', get_template_directory_uri().'/library/css/screen.css' );
+  wp_enqueue_script( 'isotope', get_template_directory_uri() . '/library/js/isotope.min.js', array(), '1.0.0', true );
+  wp_enqueue_script( 'script-name', get_template_directory_uri() . '/library/js/script.js', array(), '1.0.0', true );
 }
 
 add_action( 'wp_enqueue_scripts', 'theme_name_scripts' );
@@ -38,7 +38,7 @@ register_nav_menus(
 );
 
 
-// Filter Website Title
+// Filter Website title
 
 function ozy_filter_wp_title( $title, $sep ) {
   global $paged, $page;
@@ -66,5 +66,13 @@ function ozy_filter_wp_title( $title, $sep ) {
 
 add_filter( 'wp_title', 'ozy_filter_wp_title', 10, 2);
 
+
+
+
+// Activates the thumbnail functionality and enables theme support for featured images
+
+add_theme_support( 'post-thumbnails' );
+
+add_image_size('post-thumb', 960, 540, true);
 
 ?>

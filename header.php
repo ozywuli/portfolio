@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="<?php bloginfo( 'charset' ); ?>">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
   <meta name="author" content="">
@@ -18,9 +18,6 @@
   <link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <!-- Favicon -->
   <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicons/favicon.ico" />
-
-  <!-- Just for debugging purposes. Don't actually copy this line! -->
-  <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
@@ -46,7 +43,7 @@
 
 
 <!-- Navigation -->
-<div class="nav-container clearfix">
+<div class="nav-container grid clearfix">
   <!-- Header = Title + Logo + Responsive Toggle -->
   <header class="nav-title-wrapper">
     <h1 class="h1 nav-title"><a href="index.php">OZY WU-LI</a></h1>
